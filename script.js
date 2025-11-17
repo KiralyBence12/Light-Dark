@@ -57,6 +57,10 @@ function switchTheme() {
       h1Title.innerHTML = "This is the light theme"
       h1Title.classList.remove('text-white')
       h1Title.classList.add('text-dark')
+      footerText.style.paddingLeft = '0px';
+      footerText.style.display.remove = 'block';
+      footerText.classList.remove('text-white')
+      footerText.classList.add('text-dark')
   }
   theme = !theme
 } 
