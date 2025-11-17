@@ -33,7 +33,7 @@ function switchTheme() {
       footerText.style.display = 'block';
       footerText.classList.add('text-white')
 
-      h1Title.innerHTML = "This is the dark theme"
+      h1Title.innerHTML = "This is the Dark theme"
       h1Title.classList.add('text-white')
 
       button.textContent = "Activate Light Theme"
@@ -52,6 +52,8 @@ function switchTheme() {
         card.classList.remove("text-white", "bg-dark", "border-dark")
       });
 
+      button.textContent = "Activate Dark Theme"
+
       tables.forEach(table => {
         table.classList.remove('table-dark')
         table.classList.add('table-light')
@@ -60,7 +62,7 @@ function switchTheme() {
         card.classList.remove('col-12')
         card.classList.add('col')
       })
-      h1Title.innerHTML = "This is the light theme"
+      h1Title.innerHTML = "This is the Light theme"
       h1Title.classList.remove('text-white')
       h1Title.classList.add('text-dark')
       footerText.style.paddingLeft = '0px';
