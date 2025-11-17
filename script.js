@@ -8,7 +8,8 @@ function switchTheme() {
   const footerText = document.querySelector('.navbar-text')
   const h1Title = document.getElementById('h1_title')
   const button = document.getElementById('themeSwitch')
-  
+  const szoveg = document.getElementById('szoveg')
+
   
   if (theme === false) {
     
@@ -36,7 +37,8 @@ function switchTheme() {
       h1Title.classList.add('text-white')
 
       button.textContent = "Activate Light Theme"
-
+      
+      szoveg.classList.add('text-white')
   }
   else {
     document.body.classList.remove('bg-dark')
@@ -54,6 +56,10 @@ function switchTheme() {
         table.classList.remove('table-dark')
         table.classList.add('table-light')
       })
+            cardColums.forEach(card => {
+        card.classList.remove('col-12')
+        card.classList.add('col')
+      })
       h1Title.innerHTML = "This is the light theme"
       h1Title.classList.remove('text-white')
       h1Title.classList.add('text-dark')
@@ -61,6 +67,9 @@ function switchTheme() {
       footerText.style.display.remove = 'block';
       footerText.classList.remove('text-white')
       footerText.classList.add('text-dark')
+
+      szoveg.classList.remove('text-white')
+      szoveg.classList.add('text-dark')
   }
   theme = !theme
 } 
